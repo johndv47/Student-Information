@@ -52,7 +52,7 @@ class Person(ABC):
         )
 
 
-class Employee(Person):
+class Student(Person):
     def __init__(
         self,
         firstName,
@@ -60,10 +60,6 @@ class Employee(Person):
         idNumber,
         emailAdress,
         phoneNumber,
-        hireDate,
-        rolePerson,
-        classificationPerson,
-        annualSalary,
     ):
 
         super().__init__(firstName, lastName, idNumber, emailAdress, phoneNumber)
@@ -73,25 +69,10 @@ class Employee(Person):
         self._classificationPerson = classificationPerson
         self._annualSalary = annualSalary
 
-        # @property
-        #       def hireDate(self):
-        #    return self._hireDate
+        def __repr__(self):
+        def __str__(self):
 
-        #        @hireDate.setter
-
-
-#        def hireDate(self):
-
-
-#    def rolePerson(self):
-
-# def classificationPerson(self):
-
-# def annualSalary(self):
-
-# def __cstr__(self):
-
-# def __rpr__(self):
+        
 
 
 def main():

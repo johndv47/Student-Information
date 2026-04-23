@@ -52,6 +52,31 @@ class Person(ABC):
         )
 
 
+class Employee(Person):
+    def __init__(
+        self,
+        firstName,
+        lastName,
+        idNumber,
+        emailAdress,
+        phoneNumber,
+        hireDate,
+        rolePerson,
+        classificationPerson,
+        annualSalary,
+    ):
+
+        super().__init__(firstName, lastName, idNumber, emailAdress, phoneNumber)
+
+        self._hireDate = hireDate
+        self._rolePerson = rolePerson
+        self._classificationPerson = classificationPerson
+        self._annualSalary = annualSalary
+
+
+
+
+
 class Student(Person):
     def __init__(
         self,

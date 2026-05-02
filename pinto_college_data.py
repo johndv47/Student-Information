@@ -20,6 +20,13 @@ from abc import ABC, abstractmethod
 
 # Both Employees and Student objects are appended to personList to keep track
 # of total persons.
+
+
+
+
+## UPDATE CODE TO RETURN EMPLOYEE / STUDENTS AS OBJECTS - THIS WILL INCREASE MODULARITY FUNCTIONALITY
+
+# REWRITE PERSON LIST INTO MAIN INIT
 personList = []
 
 class Person(ABC):
@@ -219,11 +226,9 @@ class Student(Person):
 
 
 # FILE HANDLING - Employees
-
-employeeList = []
-
+# employees.txt is required to call this function
 def getEmployees():
-    # employees.txt is required to call this function
+        employeeList = []
     try:
         with open('employees.txt', 'r') as file:
             next(file) # Skips header line
@@ -332,10 +337,10 @@ def displayEmployeeContact():
 
 # FILE HANDLING - Students
 
-studentList = []
 
 
 def getStudents():
+        studentList = []
     try:
         with open('students.txt', 'r') as file:
             next(file)
